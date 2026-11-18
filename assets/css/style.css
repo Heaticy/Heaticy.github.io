@@ -244,6 +244,21 @@ h2::after {
 .when { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .muted { color: var(--muted); font-size: .9rem; }
 
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--fg);
+  transition: border-color .15s, transform .15s, box-shadow .15s;
+}
+.project:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); text-decoration: none; }
+.project b { color: var(--accent); }
+.project span { font-size: .88rem; color: var(--muted); }
+
 footer { color: var(--muted); font-size: .8rem; text-align: right; padding-top: 8px; border-top: 1px solid var(--line); }
 
 /* Narrow screens */
