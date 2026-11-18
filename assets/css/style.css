@@ -160,17 +160,19 @@ h2::after {
   font-weight: 500;
 }
 
-/* News */
-.news { list-style: none; padding: 0; margin: 0; }
-.news li {
+/* News, teaching, honors */
+.news, .teach { list-style: none; padding: 0; margin: 0; }
+.news li, .teach li {
   display: grid;
   grid-template-columns: 96px 1fr;
   gap: 16px;
   padding: 8px 0;
   border-bottom: 1px dashed var(--line);
 }
-.news li:last-child { border-bottom: 0; }
+.teach li { grid-template-columns: 150px 1fr; }
+.news li:last-child, .teach li:last-child { border-bottom: 0; }
 .news time { color: var(--muted); font-size: .88rem; font-variant-numeric: tabular-nums; padding-top: 1px; }
+.teach .when { padding-top: 2px; }
 
 /* Publications */
 .legend { margin: -6px 0 18px; color: var(--muted); font-size: .85rem; }
@@ -198,21 +200,13 @@ h2::after {
 .thumb img { display: block; width: 100%; height: auto; transition: transform .35s ease; }
 .pub:hover .thumb img { transform: scale(1.03); }
 
-.thumb.badge {
+.thumb.diagram {
   aspect-ratio: 935 / 476;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background:
-    radial-gradient(circle at 25% 20%, rgba(255, 255, 255, .18), transparent 55%),
-    linear-gradient(135deg, #1f5f8b, #2f3f7a 60%, #4a2f6b);
-  color: #fff;
-  border: 0;
+  padding: 8px;
+  background: #fff;
 }
-
-.badge-venue { font: 700 1.9rem/1 var(--serif); letter-spacing: 3px; }
-.badge-year { margin-top: 6px; font-size: .9rem; letter-spacing: 6px; opacity: .85; }
 
 .pub h3 { margin: 0 0 8px; font-size: 1.05rem; line-height: 1.4; }
 .pub p { margin: 0 0 6px; }
@@ -250,8 +244,6 @@ h2::after {
 .when { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .muted { color: var(--muted); font-size: .9rem; }
 
-.plain { padding-left: 18px; margin: 0; }
-
 /* Open source */
 .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .card {
@@ -279,4 +271,5 @@ footer { color: var(--muted); font-size: .8rem; text-align: right; padding-top: 
   .pub { grid-template-columns: 1fr; }
   .cards { grid-template-columns: 1fr; }
   .news li { grid-template-columns: 80px 1fr; }
+  .teach li { grid-template-columns: 1fr; gap: 0; }
 }
