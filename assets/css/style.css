@@ -244,23 +244,6 @@ h2::after {
 .when { font-size: .85rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .muted { color: var(--muted); font-size: .9rem; }
 
-/* Open source */
-.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 16px 18px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  color: var(--fg);
-  transition: border-color .15s, transform .15s, box-shadow .15s;
-}
-.card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow); text-decoration: none; }
-.card b { color: var(--accent); }
-.card span { font-size: .88rem; color: var(--muted); }
-
 footer { color: var(--muted); font-size: .8rem; text-align: right; padding-top: 8px; border-top: 1px solid var(--line); }
 
 /* Narrow screens */
@@ -269,7 +252,6 @@ footer { color: var(--muted); font-size: .8rem; text-align: right; padding-top: 
   .profile { position: static; }
   .avatar { width: 180px; }
   .pub { grid-template-columns: 1fr; }
-  .cards { grid-template-columns: 1fr; }
   .news li { grid-template-columns: 80px 1fr; }
   .teach li { grid-template-columns: 1fr; gap: 0; }
 }
